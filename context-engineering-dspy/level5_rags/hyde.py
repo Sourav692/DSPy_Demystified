@@ -31,7 +31,7 @@ class HypotheticalDoc(dspy.Signature):
 class MultiHopHydeSearch(dspy.Module):
     def __init__(self, texts, embs, n_hops=3, k=10):
         self.predict = dspy.ChainOfThought(HypotheticalDoc)
-        self.predict.set_lm(lm=dspy.LM("gemini/gemini-2.0-flash"))
+        self.predict.set_lm(lm=dspy.LM("openai/gpt-4o-mini"))
         self.embedding_retriever = BasicEmbeddingsRAG(texts, embs)
         self.bm25_retriever = BM25Retriever(texts)
 

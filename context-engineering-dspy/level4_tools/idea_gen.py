@@ -88,7 +88,7 @@ class IdeaGenerator(dspy.Module):
         return selected_joke_idea
 
 async def main():
-    joke_generator = ConditionalJokeGenerator()
+    joke_generator = IdeaGenerator()
     joke = await joke_generator.acall(
         query="Write a joke about AI that has to do with them turning rogue."
     )

@@ -109,7 +109,7 @@ class ConditionalJokeGenerator(dspy.Module):
 async def main():
     # Define hyperparameters
     joke_lms = ["openai/gpt-4.1", "gemini/gemini-1.5-pro"]
-    idea_lms = ["openai/gpt-4.1-mini", "gemini/gemini-2.0-flash"]
+    idea_lms = ["openai/gpt-4.1-mini", "openai/gpt-4o-mini"]
     temperatures = [0.2, 0.7, 1.2]
     num_samples = [2, 3]
     num_reflection_steps = [1, 3]
